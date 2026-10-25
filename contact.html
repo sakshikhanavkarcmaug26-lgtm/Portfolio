@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sakshi</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS for a note used on this page only. -->
+    <style>
+        .form-note {
+            color: #64716d;
+            font-size: 0.92rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <!-- CHANGE THE IMAGE FILE NAME HERE TOO -->
+            <img src="images/profile.jpg (2).jpg" alt="Your profile photo" class="profile-photo">
+            <span>Sakshi's Portfolio</span>
+        </a>
+
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html#education">Education</a>
+        </nav>
+    </header>
+
+    <main class="page-main contact-layout">
+
+        <section class="page-heading">
+            <p class="eyebrow">HAVE A QUESTION?</p>
+            <h1>Let's Connect</h1>
+            <p>
+                Fill out the form below to send a sample enquiry.
+                This is a demonstration form for my portfolio assignment.
+            </p>
+        </section>
+
+        <form class="contact-form" id="contact-form"
+              action="#" method="post">
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="full-name">Your Name</label>
+                    <input type="text" id="full-name" name="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email"
+                           placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-date">Preferred Contact Date</label>
+                    <input type="date" id="contact-date" name="contact-date">
+                </div>
+
+                <div class="form-field">
+                    <label for="enquiry-type">Enquiry Type</label>
+                    <select id="enquiry-type" name="enquiry-type" required>
+                        <option value="">Choose an option</option>
+                        <option value="opportunity">Job Opportunity</option>
+                        <option value="project">Project Discussion</option>
+                        <option value="question">General Question</option>
+                    </select>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Preferred Contact Mode</legend>
+
+                <label class="choice-label">
+                    <input type="radio" id="mode-email"
+                           name="contact-mode" value="email" checked>
+                    Email
+                </label>
+
+                <label class="choice-label">
+                    <input type="radio" id="mode-phone"
+                           name="contact-mode" value="phone">
+                    Phone
+                </label>
+
+                <label class="choice-label">
+                    <input type="radio" id="mode-video"
+                           name="contact-mode" value="video">
+                    Video Call
+                </label>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Write your message here..."
+                          required></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="cv-upload">Upload CV (Optional)</label>
+                <input type="file" id="cv-upload" name="cv-upload"
+                       accept=".pdf,.doc,.docx">
+            </div>
+
+            <label class="choice-label consent-label">
+                <input type="checkbox" id="consent"
+                       name="consent" required>
+                I agree to share the information in this form.
+            </label>
+
+            
+            <div class="form-buttons">
+                <button class="primary-button" type="submit">
+                    Send Message
+                </button>
+
+                <button class="secondary-button" type="reset">
+                    Reset Form
+                </button>
+            </div>
+        </form>
+
+        <section class="location-panel">
+            <h2>Based in India</h2>
+            <p>Navi mumbai</p>
+
+            <iframe
+                title="Map of Mumbai"
+                src="https://www.google.com/maps?q=Mumbai%2C%20India&output=embed"
+                loading="lazy">
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with care by Sakshi</p>
+        <a href="index.html">Back Home</a>
+    </footer>
+
+</body>
+</html>

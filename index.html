@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header stays at the top while scrolling. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <!-- CHANGE THE IMAGE FILE NAME HERE -->
+            <img src="images/profile.jpg (2).jpg" alt="Sakshi's profile photo" class="profile-photo">
+            <span>Sakshi's Portfolio</span>
+        </a>
+
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="#education">Education</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction section -->
+        <section class="hero">
+            <p class="eyebrow">HELLO, I'M</p>
+            <h1>Sakshi Khanavkar</h1>
+            <h2>Introduction</h2>
+
+            <p class="intro-text">
+                My name is Sakshi, and I am from Navi Mumbai. 
+                I completed my 10th and 12th from Maharashtra State Board. 
+                Completed my Bachelor of Engineering in Computer Science Engineering.  
+                Currently, I am pursuing the PG Certificate Programme in Advanced Computing from C-DAC Mumbai.
+Talking about my projects, I have worked on Smart Donation Registry and Analysis of Tuberculosis. 
+Through these projects, I have gained practical knowledge, improved my technical skills, and developed my problem-solving abilities. 
+I am continuously learning new technologies and trying to apply my knowledge through practical implementation.Talking about my hobbies, I enjoy learning new technologies, exploring new things, and improving myself every day.My short-term goal is to get a good job as a Software Developer, where I can apply my knowledge and enhance my technical skills. 
+My long-term goal is to become a successful software professional and build a strong career in the IT industry.
+That's all about me. Thank you.
+            </p>
+
+            <a class="primary-button" href="projects.html">
+                View My Projects
+            </a>
+        </section>
+
+        <!-- Middle row: subscription and About Me -->
+        <section class="middle-row">
+
+            <div class="panel subscribe-panel">
+                <h3>Stay in Touch</h3>
+                <p>Get updates about my learning journey.</p>
+
+                <form action="#" method="get">
+                    <label for="subscribe-email">Email Address</label>
+
+                    <div class="subscribe-controls">
+                        <input
+                            type="email"
+                            id="subscribe-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="panel about-panel">
+                <h3>About Me</h3>
+
+                <p>
+                    My name is Sakshi, and I am from Navi Mumbai. I completed my 10th and 12th from Maharashtra State Board. Completed my Bachelor of Engineering in Computer Science Engineering.  
+                    Currently, I am pursuing the PG Certificate Programme in Advanced Computing from C-DAC Mumbai. I enjoy learning new technologies and developing projects using Java, Spring Boot, React, and MySQL. 
+                    My goal is to become a successful Software Developer.
+                </p>
+
+                <p>
+                    <strong>My focus:</strong>
+                    <span class="highlight">Learn. Build. Improve.</span>
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Three cards -->
+        <section class="card-row">
+
+            <article class="info-card" id="education">
+                <div class="card-icon">✦</div>
+                <h3>Education</h3>
+
+                <p>My learning journey so far:</p>
+
+                <ol>
+                    <li>School education</li>
+                    <li>Graduation / qualification</li>
+                    <li>Current course or certification</li>
+                </ol>
+            </article>
+
+            <article class="info-card featured-card">
+                <span class="card-label">Currently learning</span>
+                <div class="card-icon">&lt;/&gt;</div>
+                <h3>Skills</h3>
+
+                <p>Technologies I am learning and practising:</p>
+
+                <ul id="skills-list">
+                    <li>HTML and CSS</li>
+                    <li>Java</li>
+                    <li>SQL / DBMS</li>
+                    <li>Problem solving</li>
+                    <li>Git and GitHub</li>
+                </ul>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">▣</div>
+                <h3>Projects</h3>
+
+                <p>
+                    Small practice projects help me apply what I learn.
+                    Visit the Projects page to see my work and the
+                    technologies used.
+                </p>
+
+                <a class="text-link" href="projects.html">
+                    Explore Projects →
+                </a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with care by Sakshi</p>
+        <a href="contact.html">Let's connect</a>
+    </footer>
+
+    <!-- Later: a dark mode button could be added here. -->
+
+</body>
+</html>

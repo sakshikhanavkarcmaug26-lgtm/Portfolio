@@ -1,0 +1,601 @@
+
+/* Selector precedence: inline CSS > ID > class > tag > universal (*). */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ink: #203a36;
+    --muted: #62736e;
+    --paper: #f6f3ea;
+    --card: #fffdf8;
+    --accent: #bd5d43;
+    --accent-dark: #8e3f30;
+    --mint: #dce9df;
+    --line: #d8dfd6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.65;
+    padding-top: 88px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--muted);
+}
+
+a {
+    color: var(--accent-dark);
+    text-decoration: none;
+}
+
+/* Fixed header and navigation */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-height: 72px;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(110deg, #dce9df, #f6e8d6);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 16px rgba(32, 58, 54, 0.07);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-weight: bold;
+}
+
+.brand span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+}
+
+/* Profile photo size and shape */
+.profile-photo {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--card);
+    background: var(--mint);
+}
+
+/* ID selector for navigation */
+#main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#main-nav a {
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-weight: bold;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+#main-nav a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Introduction section */
+.hero {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 54px 24px 48px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: var(--accent-dark);
+    margin: 14px 0 18px;
+}
+
+.intro-text {
+    max-width: 820px;
+    margin: 0 auto 26px;
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.primary-button {
+    background: var(--accent);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: var(--mint);
+    color: var(--ink);
+}
+
+.secondary-button:hover {
+    background: #c5d8ca;
+    transform: translateY(-2px);
+}
+
+/* Middle row uses Flexbox */
+.middle-row {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Shared panel styling */
+.panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(32, 58, 54, 0.05);
+}
+
+.subscribe-panel {
+    flex: 1;
+}
+
+.about-panel {
+    flex: 2;
+}
+
+.panel h3 {
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+}
+
+.subscribe-panel form {
+    margin-top: 18px;
+}
+
+.subscribe-panel label,
+.form-field label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+/* Email input and subscribe button */
+.subscribe-controls {
+    display: flex;
+    gap: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: white;
+    color: var(--ink);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #c9d9ce;
+    border-color: var(--accent);
+}
+
+.subscribe-controls button {
+    border: 0;
+    border-radius: 7px;
+    padding: 0 15px;
+    background: var(--ink);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.subscribe-controls button:hover {
+    background: var(--accent-dark);
+}
+
+.highlight {
+    color: var(--accent-dark);
+    font-weight: bold;
+}
+
+/* Education, Skills and Projects cards */
+.card-row {
+    max-width: 1320px;
+    margin: 30px auto 70px;
+    padding: 0 28px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.info-card {
+    position: relative;
+    flex: 1;
+    width: 30%;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 34px 26px;
+    margin: 4px 0;
+    background: var(--card);
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(32, 58, 54, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(32, 58, 54, 0.1);
+}
+
+/* Different Flexbox value for the featured card */
+.featured-card {
+    flex: 1.15;
+}
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    background: var(--mint);
+    color: var(--accent-dark);
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.info-card h3 {
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+}
+
+.info-card p,
+.info-card li {
+    font-size: 0.94rem;
+}
+
+.info-card ul,
+.info-card ol {
+    display: inline-block;
+    text-align: left;
+    margin: 12px 0 0 20px;
+}
+
+/* Absolute position inside the relative card */
+.card-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: var(--mint);
+    color: var(--ink);
+    font-size: 0.7rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+/* Common layout for Projects and Contact pages */
+.page-main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 42px 28px 70px;
+}
+
+.page-heading {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.page-heading h1 {
+    color: var(--accent-dark);
+    margin-bottom: 14px;
+}
+
+/* Project table */
+.table-wrap {
+    overflow-x: auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    vertical-align: top;
+}
+
+th {
+    background: var(--mint);
+    color: var(--ink);
+    font-size: 0.9rem;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody tr:hover {
+    background: #faf7ef;
+}
+
+/* Project cards also use Flexbox */
+.project-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.project-card {
+    flex: 1;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--card);
+    transition: transform 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.project-type {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Contact form */
+.contact-layout {
+    max-width: 950px;
+}
+
+.contact-form,
+.location-panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 20px rgba(32, 58, 54, 0.05);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 0 0 20px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+.choice-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 18px 4px 0;
+    color: var(--muted);
+}
+
+.choice-label input {
+    width: auto;
+}
+
+.consent-label {
+    margin-bottom: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Map */
+.location-panel h2 {
+    color: var(--accent-dark);
+    margin-bottom: 8px;
+}
+
+.location-panel iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 18px;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 5%;
+    background: #e7eee7;
+    border-top: 1px solid var(--line);
+}
+
+.site-footer p,
+.site-footer a {
+    font-size: 0.9rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 800px) {
+    body {
+        padding-top: 130px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #main-nav {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .middle-row,
+    .card-row,
+    .project-cards {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 10px 4%;
+    }
+
+    #main-nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding-top: 34px;
+    }
+
+    .middle-row,
+    .card-row {
+        padding: 0 16px;
+    }
+
+    .panel,
+    .contact-form,
+    .location-panel {
+        padding: 20px;
+    }
+
+    .subscribe-controls {
+        flex-direction: column;
+    }
+
+    .subscribe-controls button {
+        padding: 10px;
+    }
+
+    .form-buttons,
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
